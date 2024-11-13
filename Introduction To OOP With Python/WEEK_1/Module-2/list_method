@@ -1,0 +1,19 @@
+
+numbers = [45,6,78,90,123,456,553,890,231]
+numbers.append(3)
+print(numbers)
+numbers.insert(0,71)
+print(numbers)
+numbers.remove(123)
+print(numbers)
+last = numbers.pop()
+print(last,numbers)
+sorted = numbers.sort()
+print(sorted,numbers)
+numbers.reverse()
+print(numbers)
+numbers.copy()
+print(numbers)
+numbers.clear()
+print(numbers)
+

@@ -1,0 +1,34 @@
+I-problem1:
+Given two numbers A and B. Print "Yes" if A is greater than or equal to B. Otherwise print "No".
+A এবং B দুটি সংখ্যা দেওয়া হয়েছে। A এর থেকে বড় বা B এর সমান হলে "হ্যাঁ" প্রিন্ট করুন। অন্যথায় "না" প্রিন্ট করুন।
+
+
+J-problem2:
+Given two numbers A and B. Print "Multiples" if A is multiple of B or vice versa. Otherwise print "No Multiples"
+A এবং B দুটি সংখ্যা দেওয়া হয়েছে। A যদি B-এর বহুগুণ হয় বা এর বিপরীত হয় তাহলে "মাল্টিপল" প্রিন্ট করুন। অন্যথায় "কোন একাধিক নয়" প্রিন্ট করুন
+
+
+N-problem3:
+Given a letter X. If the letter is lowercase print the letter after converting it from lowercaseletter to uppercase
+letter. Otherwise print the letter after convertingit from uppercase letter to lowercase letter
+একটি অক্ষর X দেওয়া হয়েছে। অক্ষরটি ছোট হাতের হলে ছোট হাতের অক্ষর থেকে বড় হাতের অক্ষরে রূপান্তর করে অক্ষরটি প্রিন্ট করুন। 
+অন্যথায় বড় হাতের অক্ষর থেকে ছোট হাতের অক্ষরে রূপান্তর করার পরে অক্ষরটি প্রিন্ট করুন
+
+
+P-problem4:
+Given a number X. Print "EVEN" if the first digit of X is even number. Otherwise print "ODD".
+For example: In 4569 the first digit is 4, the second digit is 5, the third digit is 6 and the fourth digit is 9.
+একটি সংখ্যা X দেওয়া হয়েছে। X-এর প্রথম সংখ্যা জোড় সংখ্যা হলে "EVEN" প্রিন্ট করুন। অন্যথায় "ODD" প্রিন্ট করুন।
+উদাহরণস্বরূপ: 4569-এ প্রথম অঙ্কটি 4, দ্বিতীয় অঙ্কটি 5, তৃতীয় অঙ্কটি 6 এবং চতুর্থ অঙ্কটি 9।
+
+
+M-problem5:
+Given a letter X. Determine whether X is Digit or Alphabet and if it is Alphabet determine
+if it is Capital Case or Small Case
+X একটি অক্ষর দেওয়া হয়েছে। X ডিজিট বা বর্ণমালা কিনা তা নির্ধারণ করুন এবং এটি ক্যাপিটাল কেস বা ছোট কেস কিনা তা নির্ধারণ করুন
+
+
+K-problem6:
+Given 3 numbers A, B and C, Print the minimum and the maximum numbers.
+দেওয়া 3টি সংখ্যা A, B এবং C, সর্বনিম্ন এবং সর্বোচ্চ সংখ্যাগুলি প্রিন্ট করুন।
+

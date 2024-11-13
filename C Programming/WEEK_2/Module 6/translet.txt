@@ -1,0 +1,33 @@
+B-problem1:
+Given a number N Print all even numbers between 1 and N inclusive in separate lines
+একটি সংখ্যা N দেওয়া হয়েছে 1 এবং N এর মধ্যে সমস্ত জোড় সংখ্যা আলাদা লাইনে প্রিন্ট করুন
+Print the answer according to the required above If there are no even numbers print -1
+উপরের প্রয়োজন অনুযায়ী উত্তর প্রিন্ট করুন যদি কোন জোড় সংখ্যা না থাকে তাহলে প্রিন্ট করুন-1
+
+
+C-problem2:
+Given N numbers Count how many of these values are even,odd positive and negative
+প্রদত্ত N সংখ্যাগুলি গণনা করুন এই মানগুলির কতগুলি জোড়, বিজোড় ধনাত্মক এবং ঋণাত্মক
+
+
+D-problem3:
+Given multiple lines each line contains a number X which is a password Print "Wrong" if the password is incorrect
+otherwise, print "Correct" and terminate the program.
+একাধিক লাইন দিলে প্রতিটি লাইনে একটি সংখ্যা X থাকে যা একটি পাসওয়ার্ড। "ভুল" প্রিন্ট করুন যদি পাসওয়ার্ডটি ভুল হয় অন্যথায়, "সঠিক" মুদ্রণ
+করুন এবং প্রোগ্রামটি বন্ধ করুন।
+দ্রষ্টব্য: "সঠিক" পাসওয়ার্ডটি হল 1999 নম্বর৷
+
+
+E-problem4:
+Given a number N, and N numbers, find maximum number in these N numbers.
+একটি সংখ্যা N, এবং N সংখ্যা দেওয়া হলে, এই N সংখ্যাগুলিতে সর্বাধিক সংখ্যা খুঁজুন।
+
+
+F-problem5:
+Given a number N. Print the maltiplication table of the number from 1 to 12
+একটি সংখ্যা N দেওয়া হয়েছে। সংখ্যাটির 1 থেকে 12 পর্যন্ত সংখ্যার সারণীটি মুদ্রণ করুন
+
+
+Q-problem6:
+Given a number N. Print the digits of that number from right to left separated by space.
+একটি সংখ্যা N দেওয়া হয়েছে। স্থান দ্বারা পৃথক করে ডান থেকে বামে সংখ্যাটির সংখ্যাগুলি মুদ্রণ করুন।
