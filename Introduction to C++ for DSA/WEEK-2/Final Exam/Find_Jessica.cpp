@@ -37,25 +37,30 @@ Rahat Rifat Sakib Asif Jessicarvai Sifat Ratul Munna
 Sample Output 3
 
 NO*/
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     string s;
-    getline(cin,s);
+    getline(cin, s);
     stringstream ss(s);
     string word;
     int found = 0;
-    while(ss>>word){
-        if(word=="Jessica"){
-            found=1;
+    while (ss >> word)
+    {
+        if (word == "Jessica")
+        {
+            found = 1;
             break;
         }
     }
-    if(found==1){
-        cout<<"YES"<<endl;
+    if (found == 1)
+    {
+        cout << "YES" << endl;
     }
-    else{
-        cout<<"NO"<<endl;  
+    else
+    {
+        cout << "NO" << endl;
     }
     return 0;
 }

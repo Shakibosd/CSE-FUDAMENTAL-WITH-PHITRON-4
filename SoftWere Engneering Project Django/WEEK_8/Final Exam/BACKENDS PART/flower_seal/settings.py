@@ -18,9 +18,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True 
 
-LOGIN_URL = "http://127.0.0.1:5500/login.html"
+CORS_ALLOWED_ORIGINS = [
+    "https://flower-seal-backend.vercel.app",
+    "https://flower-seal.netlify.app",
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -36,8 +39,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'flowers',
+    'pass_change',
     'orders',
-    'profiles',
     'admins',
     'payment',
     'rest_framework.authtoken',
@@ -47,14 +50,13 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
     ],
-    
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
-    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    ],   
 }
 
 MIDDLEWARE = [
@@ -120,10 +122,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-REST_AUTH_REGISTER_SERIALIZERS = {
-    'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer',
-}
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -134,7 +132,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

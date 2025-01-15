@@ -24,8 +24,10 @@
 
 <body>
     <!-- Navbar -->
-    <div id="navbar"></div>
-    <script src="./js/navbar.js"></script>
+    <header>
+        <div id="navbar"></div>
+        <script src="./js/navbar.js"></script>
+    </header>
 
     <section style="padding-top: 150px;">
         <div class="container">
@@ -39,7 +41,7 @@
         <div class="container pt-3">
             <h2 class="mb-4 text-center pt-3">Order History</h2>
             <br>
-            <div id="order-history" class="card index_flower_card">
+            <div id="order-history">
                 <div class="card-body">
                     <div id="order-details" class="row">
 
@@ -52,19 +54,19 @@
     <section>
         <h1 class="text-center pt-3">Order Sold And Profit</h1>
         <br>
-        <div id="order-summary" class="card container p-5 index_flower_card" style="border-radius: 10px;">
+        <div id="order-summary" class="container p-5 index_flower_card" style="border-radius: 10px;">
             <h2>Total Products Sold: <span id="total-products">0</span></h2>
             <h2>Total Revenue: <span id="total-revenue">0</span></h2>
             <h2>Total Profit: <span id="total-profit">0</span></h2>
         </div>
         <div id="order-details" class="row mt-4"></div>
     </section>
-    
+
     <br>
 
     <!-- Footer -->
     <footer>
-        <div id="footer" class="pt-4"></div>
+        <div id="footer"></div>
         <script src="./js/footer.js"></script>
     </footer>
 
@@ -74,11 +76,11 @@
     <!-- profile update -->
     <script src="./js/product_info.js"></script>
 
-    <!-- check js -->
-    <script src="./js/check.js"></script>
-
     <!-- dark -->
     <script src="./js/dark.js"></script>
+
+    <!-- login cheks -->
+    <script src="./js/check.js"></script>
 
     <!-- bootstrap scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

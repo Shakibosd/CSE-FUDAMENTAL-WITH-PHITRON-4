@@ -50,18 +50,21 @@ Alisa will buy new shoes*/
 
 #include <stdio.h>
 #include <string.h>
-int main(){
+int main()
+{
     int n;
-    scanf("%d",&n);
-    if(n > 1000){
-        printf("I will buy punjabi\n");
-        if(n >= 1500){
-            printf("I wil buy new shoes\nAlisa will buy new shoes\n");
+    scanf("%d", &n);
+    if (n > 1000)
+    {
+        printf("I will buy bunjabi\n");
+        if (n >= 1500)
+        {
+            printf("I will buy new shoes\nAlisa will buy new shoes\n");
         }
     }
-    else{
+    else
+    {
         printf("Bad Luck!\n");
     }
     return 0;
 }
-

@@ -10,7 +10,6 @@
   <!-- css linkup -->
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/dark.css" />
-
   <!-- my web title -->
   <title>flower details Page</title>
   <!-- bootstrap cdn -->
@@ -22,9 +21,10 @@
 
 <body>
   <!-- Navbar -->
-  <div id="navbar"></div>
-  <script src="./js/navbar.js"></script>
-
+  <header>
+    <div id="navbar"></div>
+    <script src="./js/navbar.js"></script>
+  </header>
   <br />
   <main>
     <br>
@@ -40,16 +40,12 @@
         <form id="comment-edit-form">
           <input type="hidden" id="edit-comment-id">
           <div>
-            <label for="edit-comment-name"><b>Name : </b></label>
-            <input type="text" class="form-control" id="edit-comment-name" name="edit-comment-name" required />
-          </div>
-          <div>
             <br>
             <label for="edit-comment-body"><b>Messages : </b></label>
             <textarea class="form-control" id="edit-comment-body" name="edit-comment-body" required></textarea>
           </div>
           <br>
-          <button class="btn btn-outline-info" type="submit" onclick="location.reload()">Update
+          <button class="gradient-btn-1" type="submit">Update
             Comment</button>
         </form>
         <br>
@@ -58,7 +54,7 @@
       <br>
       <h3 style="padding-left: 20px;">
         Total Count >>
-        <span id="comments-count" class="badge bg-secondary">0</span>
+        <span id="comments-count" class="gradient-btn">0</span>
       </h3>
       <div id="comments-section" class="mt-5" style="padding-left: 2rem;">
         <div id="comments-list" class="list-group"></div>
@@ -92,11 +88,11 @@
   <!-- flower detail js -->
   <script src="./js/flower_details.js"></script>
 
-  <!-- check js -->
-  <script src="./js/check.js"></script>
-
   <!-- dark -->
   <script src="./js/dark.js"></script>
+
+  <!-- login cheks -->
+  <script src="./js/check.js"></script>
 
   <!-- bootstrap scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

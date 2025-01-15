@@ -16,10 +16,10 @@
 
 body {
     background-color: rgb(0, 0, 0, 0.9) !important;
-    -webkit-user-select: none;
+    /* -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; */
 }
 
 .my-logo {
@@ -348,7 +348,7 @@ body {
 }
 
 .hovers {
-    box-shadow: 0px 3px 5px gray;
+    box-shadow: 4px 4px 8px rgb(128, 128, 128, 0.3);
 }
 
 .home__blob {

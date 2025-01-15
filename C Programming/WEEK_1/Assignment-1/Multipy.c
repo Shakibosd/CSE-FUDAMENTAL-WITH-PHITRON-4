@@ -31,11 +31,12 @@ Sample Output 2
 
 -6200*/
 #include <stdio.h>
-int main(){
-    long long int a, b, multiplacition;
-    scanf("%lld %lld",&a ,&b);
-    multiplacition = a * b;
-    printf("%lld\n",multiplacition);
+#include <string.h>
+int main()
+{
+    long long int a, b, multiplication;
+    scanf("%lld %lld", &a, &b);
+    multiplication = a * b;
+    printf("%lld\n", multiplication);
     return 0;
 }
-

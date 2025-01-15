@@ -30,8 +30,10 @@
     }
   </style>
   <!-- Navbar -->
-  <div id="navbar"></div>
-  <script src="./js/navbar.js"></script>
+  <header>
+    <div id="navbar"></div>
+    <script src="./js/navbar.js"></script>
+  </header>
 
   <!-- Login -->
   <div class="d-flex container flex-wrap-login gap-5 align-items-center justify-content-center"
@@ -53,22 +55,28 @@
           <div class="input-group">
             <input type="password" class="form-control" id="password" name="password"
               placeholder="Please Enter Your Password" required />
-            <span class="input-group-text p-2"
-              onclick="togglePassword('password', this)">
+            <span class="input-group-text p-2" onclick="togglePassword('password', this)">
               <i class='bx bxs-low-vision'></i>
             </span>
           </div>
         </div>
         <br>
         <div>
-          <button type="submit" class="btn btn-outline-info">
-            <b>Sign in</b>
+          <button type="submit" class="gradient-btn">
+            <b>Login</b>
           </button>
+        </div>
+        <div class="text-center text-light">
+          <p class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+            <a class="none mb-2 mb-md-0" href="./password_reset.html"><b>Forgotten
+                Password?</b></a>
+            <span class="d-none d-md-inline-block">&nbsp;&nbsp;</span>
+            <a class="none" href="./register.html"><b>· Sign Up For Smart City</b></a>
+          </p>
         </div>
       </form>
     </div>
   </div>
-  <br>
 
   <!-- Footer -->
   <footer>
@@ -79,11 +87,11 @@
   <!-- Auth Js -->
   <script src="./js/auth.js"></script>
 
-  <!-- check 1 js -->
-  <script src="./js/check1.js"></script>
-
   <!-- dark js -->
   <script src="./js/dark.js"></script>
+
+  <!-- login cheks -->
+  <script src="./js/check1.js"></script>
 
   <!-- bootstrap scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

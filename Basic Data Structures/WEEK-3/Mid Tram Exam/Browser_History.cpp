@@ -73,22 +73,26 @@
 // Not Available
 // y*/
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-class node{
-    public:
-        string val;
-        node* next;
-        node* prev;
-    node(string val){
-        this->val=val;
-        this->next=NULL;
-        this->prev=NULL;
+class node
+{
+public:
+    string val;
+    node *next;
+    node *prev;
+    node(string val)
+    {
+        this->val = val;
+        this->next = NULL;
+        this->prev = NULL;
     }
 };
-void insert_at_tail(node *&head, node *&tail, string val){
-    node* newNode = new node(val);
-    if(tail == NULL){
+void insert_at_tail(node *&head, node *&tail, string val)
+{
+    node *newNode = new node(val);
+    if (tail == NULL)
+    {
         head = newNode;
         tail = newNode;
         return;
@@ -97,73 +101,90 @@ void insert_at_tail(node *&head, node *&tail, string val){
     newNode->prev = tail;
     tail = tail->next;
 }
-void print_normal_node(node* head){
-    node* tmp = head;
-    while(tmp!=NULL){
-        cout<<tmp->val<<" ";
+void print_normal_node(node *head)
+{
+    node *tmp = head;
+    while (tmp != NULL)
+    {
+        cout << tmp->val << " ";
         tmp = tmp->next;
     }
-    cout<<endl;
+    cout << endl;
 }
-void find_address_node(node* head, node *&tmp, string add){
-    node* tmp2 = head;
+void find_address_node(node *head, node *&tmp, string add)
+{
+    node *tmp2 = head;
     int flag = 0;
-    while(tmp2!=NULL){
-        if(tmp2->val == add){
+    while (tmp2 != NULL)
+    {
+        if (tmp2->val == add)
+        {
             tmp = tmp2;
             flag = 1;
             break;
         }
         tmp2 = tmp2->next;
     }
-    if(flag==0){
-        cout<<"Not Available"<<endl;
+    if (flag == 0)
+    {
+        cout << "Not Available" << endl;
     }
-    else{
-        cout<<tmp2->val<<endl;
+    else
+    {
+        cout << tmp2->val << endl;
     }
 }
-int main(){
-    node* head = NULL;
-    node* tail = NULL;
+int main()
+{
+    node *head = NULL;
+    node *tail = NULL;
     string val;
-    while(1){
-        cin>>val;
-        if(val == "end"){
+    while (1)
+    {
+        cin >> val;
+        if (val == "end")
+        {
             break;
         }
         insert_at_tail(head, tail, val);
     }
     int q;
-    cin>>q;
-    node* tmp = head;
-    while(q--){
+    cin >> q;
+    node *tmp = head;
+    while (q--)
+    {
         string cmd;
-        cin>>cmd;
-        if(cmd=="visit"){
+        cin >> cmd;
+        if (cmd == "visit")
+        {
             string add;
-            cin>>add;
+            cin >> add;
             find_address_node(head, tmp, add);
         }
-        else if(cmd=="next"){
-            if(tmp->next==NULL){
-                cout<<"Not Available"<<endl;
+        else if (cmd == "next")
+        {
+            if (tmp->next == NULL)
+            {
+                cout << "Not Available" << endl;
             }
-            else{
+            else
+            {
                 tmp = tmp->next;
-                cout<<tmp->val<<endl;
+                cout << tmp->val << endl;
             }
         }
-        else if(cmd=="prev"){
-            if(tmp->prev!=NULL){
+        else if (cmd == "prev")
+        {
+            if (tmp->prev != NULL)
+            {
                 tmp = tmp->prev;
-                cout<<tmp->val<<endl;
+                cout << tmp->val << endl;
             }
-            else{
-                cout<<"Not Available"<<endl;
+            else
+            {
+                cout << "Not Available" << endl;
             }
         }
     }
     return 0;
 }
-

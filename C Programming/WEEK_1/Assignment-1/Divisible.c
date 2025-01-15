@@ -30,19 +30,23 @@ Sample Input 2
 Sample Output 2
 
 YES*/
+
 #include <stdio.h>
 #include <string.h>
-int main(){
-    int n, i;
-    scanf("%d",&n);
-    for(i=n; i<=n; i++){
-        if(i%3 == 0){
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    for (int i = n; i <= n; i++)
+    {
+        if (i % 3 == 0)
+        {
             printf("YES\n");
         }
-        else{
+        else
+        {
             printf("NO\n");
         }
     }
     return 0;
 }
-

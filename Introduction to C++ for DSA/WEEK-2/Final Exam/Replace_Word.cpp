@@ -23,20 +23,23 @@ Sample Output 0
 
 rahimisa#guy
 can#tellmewhereicanfindheriwillbegreatefulto#if#tellmetheanswer*/
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     int t;
-    cin>>t;
-    for(int i=0; i<t; i++){
+    cin >> t;
+    for (int i = 0; i < t; i++)
+    {
         string s, x;
-        cin>>s>>x;
-        int pos=0;
-        while((pos=s.find(x,pos))!=-1){
-            s.replace(pos,x.size(),"#");
+        cin >> s >> x;
+        int pos = 0;
+        while ((pos = s.find(x, pos)) != -1)
+        {
+            s.replace(pos, x.size(), "#");
             pos++;
         }
-        cout<<s<<endl;
+        cout << s << endl;
     }
     return 0;
 }

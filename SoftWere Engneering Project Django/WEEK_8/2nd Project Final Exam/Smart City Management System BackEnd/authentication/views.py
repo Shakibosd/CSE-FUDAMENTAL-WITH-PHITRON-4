@@ -13,8 +13,6 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from .models import Profile
 from .serializers import ProfileSerializer
-from django.core.mail import EmailMultiAlternatives
-from django.utils.http import urlsafe_base64_decode
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 #user list dekhar jonno
@@ -96,9 +94,9 @@ def user_activate(request, uid64, token):
     if user is not None and default_token_generator.check_token(user, token):
         user.is_active = True
         user.save()
-        return redirect('login')
+        return redirect('https://smarts-city.netlify.app/login.html')
     else:
-        return redirect('register')       
+        return redirect('https://smarts-city.netlify.app/signup.html')       
 
 #user je account create koreche ejonno se ekon web site e probesh korbe
 class LoginAPIView(APIView):

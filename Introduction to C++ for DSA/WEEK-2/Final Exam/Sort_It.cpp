@@ -51,33 +51,39 @@ Joy 9 G 28 66 45
 Shojoy 9 E 25 40 50
 Khadija 8 E 26 40 50
 Munna 8 D 30 50 40*/
-#include<bits/stdc++.h>
+
+#include <bits/stdc++.h>
 using namespace std;
-class Student{
+class Student
+{
 public:
     string nm;
     int cls;
-    string s;
+    string s;    
     int id;
     int math_marks;
     int eng_marks;
 };
-bool cmp(Student a, Student b){
-    if(a.math_marks+a.eng_marks != b.math_marks+b.eng_marks)
-       return a.math_marks+a.eng_marks > b.math_marks+b.eng_marks;
+bool cmp(Student a, Student b)
+{
+    if (a.math_marks + a.eng_marks != b.math_marks + b.eng_marks)
+        return a.math_marks + a.eng_marks > b.math_marks + b.eng_marks;
     else
-       return a.id<b.id;
+        return a.id < b.id;
 }
-int main(){
+int main()
+{
     int n;
-    cin>>n;
+    cin >> n;
     Student a[n];
-    for(int i=0; i<n; i++){
-        cin>>a[i].nm>>a[i].cls>>a[i].s>>a[i].id>>a[i].math_marks>>a[i].eng_marks;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i].nm >> a[i].cls >> a[i].s >> a[i].id >> a[i].math_marks >> a[i].eng_marks;
     }
-    sort(a,a+n,cmp);
-    for(int i=0; i<n; i++){
-         cout<<a[i].nm<<" "<<a[i].cls<<" "<<a[i].s<<" "<<a[i].id<<" "<<a[i].math_marks<<" "<<a[i].eng_marks<<endl;
+    sort(a, a + n, cmp);
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i].nm << " " << a[i].cls << " " << a[i].s << " " << a[i].id << " " << a[i].math_marks << " " << a[i].eng_marks << endl;
     }
     return 0;
 }

@@ -19,50 +19,58 @@ Sample Input 0
 1 2 3 4 5 -1
 Sample Output 0
 
-1 2 3 4 5 
+1 2 3 4 5
 Sample Input 1
 
 1 2 4 2 3 5 1 4 5 2 6 1 -1
 Sample Output 1
 
-1 2 3 4 5 6 
+1 2 3 4 5 6
 Sample Input 2
 
 5 5 1 1 2 4 2 4 1 3 5 0 -1
 Sample Output 2
 
-0 1 2 3 4 5 
+0 1 2 3 4 5
 Sample Input 3
 
 10 10 10 20 20 20 10 20 -1
 Sample Output 3
 
 10 20 */
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-class node{
-    public:
-        int val;
-        node* next;
-    node(int val){
-        this->val=val;
-        this->next=NULL;
+class node
+{
+public:
+    int val;
+    node *next;
+    node(int val)
+    {
+        this->val = val;
+        this->next = NULL;
     }
 };
-int main(){
+int main()
+{
+    // list<int> myList;
     list<int>myList;
     int val;
-    while(1){
-        cin>>val;
-        if(val == (-1)){
+    while (1)
+    {
+        cin >> val;
+        if (val == (-1))
+        {
             break;
         }
         myList.push_back(val);
     }
     myList.sort();
     myList.unique();
-    for(int val:myList){
-        cout<<val<<" ";
+    for (int val : myList)
+    {
+        cout << val << " ";
     }
     return 0;
 }
+

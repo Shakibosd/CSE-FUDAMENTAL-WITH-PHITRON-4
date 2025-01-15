@@ -15,36 +15,69 @@ const togglePassword = (fieldId, iconElement) => {
 };
 
 // Register part
-const handleRegister = (event) => {
+const handleRegister = async (event) => {
   event.preventDefault();
   const form = document.getElementById("register-form");
   const formData = new FormData(form);
 
-  const registerData = {
-    username: formData.get("username"),
-    first_name: formData.get("first_name"),
-    last_name: formData.get("last_name"),
-    email: formData.get("email"),
-    password: formData.get("password"),
-    confirm_password: formData.get("confirm_password"),
-  };
+  const fileInput = document.getElementById("profile_img");
+  const imageFile = fileInput.files[0];
 
-  console.log("Registration data", registerData);
+  const imageUploadFormData = new FormData();
+  imageUploadFormData.append("image", imageFile);
 
-  fetch("https://flower-seal-backend.vercel.app/users/register/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(registerData),
-  })
-    .then((res) => {
-      alert(
-        "Registration Successful. Please check your email for a confirmation."
-      );
-      window.location.href = "./login.html";
-    })
-    .catch((error) => console.log("Registration Error", error));
+  try {
+    const imgbbResponse = await fetch(
+      "https://api.imgbb.com/1/upload?key=2bc3cad9a1fb82d25c2c1bb0ab49b035",
+      {
+        method: "POST",
+        body: imageUploadFormData,
+      }
+    );
+
+    const imgbbResult = await imgbbResponse.json();
+
+    if (imgbbResult.success) {
+      const imgbbUrl = imgbbResult.data.url;
+
+      const registerData = {
+        username: formData.get("username"),
+        first_name: formData.get("first_name"),
+        last_name: formData.get("last_name"),
+        email: formData.get("email"),
+        password: formData.get("password"),
+        confirm_password: formData.get("confirm_password"),
+        profile_img: imgbbUrl,
+      };
+
+      console.log("Registration data", registerData);
+
+      const response = await fetch("https://flower-seal-backend.vercel.app/users/register/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(registerData),
+      });
+
+      if (response.ok) {
+        alert(
+          "Registration Successful. Please check your email for a confirmation."
+        );
+        window.location.href = "./login.html";
+      } else {
+        const errorData = await response.json();
+        console.error("Register Failed:", errorData);
+        alert("Register Failed: " + errorData.message);
+      }
+    } else {
+      console.error("Image Upload Failed:", imgbbResult.error);
+      alert("Image Upload Failed, Please Try Again.");
+    }
+  } catch (error) {
+    console.error("Registration Error:", error);
+    alert("An Error Occurred During Registration, Please Try Again.");
+  }
 };
 
 // Login part
@@ -57,7 +90,6 @@ const handleLogin = (event) => {
     username: formData.get("username"),
     password: formData.get("password"),
   };
-
   fetch("https://flower-seal-backend.vercel.app/users/login/", {
     method: "POST",
     headers: {
@@ -73,11 +105,16 @@ const handleLogin = (event) => {
       return res.json();
     })
     .then((data) => {
-      console.log("Auth token received:", data.token);
+      console.log("Auth Token Received : ", data.token);
+      console.log("Auth Id Received : ", data.user_id);
+      console.log("Auth Username Reveived : ", loginData.username);
+
       localStorage.setItem("authToken", data.token);
       localStorage.setItem("user_id", data.user_id);
+      localStorage.setItem("username", loginData.username);
+
       alert("Login Successful!");
-      window.location.href = "./update_profile.html";
+      window.location.href = `./profile.html?YourUserName=${loginData.username}`;
     })
     .catch((err) => {
       console.log("Login error", err.message);
@@ -103,6 +140,7 @@ const handleLogout = () => {
         if (res.ok) {
           localStorage.removeItem("authToken");
           localStorage.removeItem("user_id");
+          localStorage.removeItem("username");
           window.location.href = "./login.html";
         } else {
           console.log("Logout failed");

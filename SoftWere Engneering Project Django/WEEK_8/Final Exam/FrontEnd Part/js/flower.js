@@ -17,14 +17,14 @@ function fetchPosts() {
                 <h4>Title : ${post.title}</h4>
                 <p>Description : ${post.description}</p>
                 <p>Price : ${post.price} ৳</p>
-                <small>Category : <button class="btn btn-secondary"> ${post.category}</button></small>
+                <small>Category : <button class="gradient-btn"> ${post.category}</button></small>
                 <p>Stock : ${post.stock}</p>
                 <div class="d-flex gap-3">
                   <div>
-                    <button class="btn btn-success" onclick="editPost(${post.id})">Edit</button>
+                    <button class="gradient-btn" style="text-decoration: none;" onclick="editPost(${post.id})">Edit</button>
                   </div>
                   <div>
-                    <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
+                    <button class="gradient-btn-1" style="text-decoration: none;" onclick="deletePost(${post.id})">Delete</button>
                   </div>
                 </div>
               </div>
